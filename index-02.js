@@ -1,6 +1,6 @@
-const numQuestion = 3;
+const numQuestion = 10;
 const minNumber = 1;
-const maxNumber = 10;
+const maxNumber = 3;
 
 let numberOfCorrectAnswears = 0;
 
@@ -24,8 +24,35 @@ for (let i = 0; i < numQuestion; i++) {
     }
     console.log('nr of correct answears is ' + numberOfCorrectAnswears);
 }
-if (numberOfCorrectAnswears === numQuestion) {
-    alert('bravo!');
-} else {
-    alert('jestes losiem...')
+
+// I wersja, prosta, zbyt banalna
+// if (numberOfCorrectAnswears === numQuestion) {
+//     alert('bravo!');
+// } else {
+//     alert('jestes losiem...')
+// }
+
+// II wersja, wyswietla ocene w skali 1 do 5 ?
+// let grade = (numberOfCorrectAnswears / numQuestion) * 100;
+// if (grade <= 50) {
+//     alert('your grade is 1. This is sad.');
+// } else if (grade < 60) {
+//     alert('your grade is 2');
+// } else if (grade < 75) {
+//     alert('your grade is 3');
+// } else if (grade < 90) {
+//     alert('your grade is 4');
+// } else (grade < 100) {
+//     alert('your grade is 5');
+// }
+
+let percentResult = (umberOfCorrectAnswears / numQuestion) * 100;
+let result = 50;
+let grade = 1;
+console.log(result + '|' + result + '|' + percentResult >= result);
+while (result <= 100 && percentResult >= result) {
+    grade++;
+    result += 10;
+    console.log(grade + '|' + result);
 }
+
